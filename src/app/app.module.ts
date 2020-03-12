@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutMeComponent } from './content/about-me/about-me.component';
-import { MatTab } from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -14,15 +14,14 @@ import { MatTab } from '@angular/material/tabs';
     HeaderComponent,
     FooterComponent,
     AboutMeComponent,
-    MatTab,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTab,
+    MatTabsModule,
   ],
   exports: [
-    MatTab,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

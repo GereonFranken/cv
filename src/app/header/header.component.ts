@@ -1,3 +1,4 @@
+import { MatTab } from '@angular/material/tabs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
