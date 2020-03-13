@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './content/header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutMeComponent } from './content/about-me/about-me.component';
+import { AboutMeComponent } from './content/components/about-me/about-me.component';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
