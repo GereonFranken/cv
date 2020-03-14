@@ -8,13 +8,32 @@
 
 .header-background {
     background-color: rgb(3, 169, 244);
-    height: 10vh;
+    height: 16vh;
     opacity: 0.7;
     width: 100%;
 }
 
-.tab-bar {
-    height: 10%;
-    margin-top: 5%;
-    width: 60%;
+.header-wrapper {
+    display: flex;
+    flex: 1;
+    min-height: 24vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    margin-top: 4vh;
+    height: 26vh;
+    position: absolute;
+    box-shadow: 4px 4px #D0D0D0;
+}
+
+.content {
+    margin-top: 4%;
+}
+
+>mat-tab>* {
+    min-width: 100%;
 }

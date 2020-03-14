@@ -1,4 +1,3 @@
-import { MatTab } from '@angular/material/tabs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  profilbildPath = 'D:\\Eigene-Projekte\\cv\\src\\assets\\profilbild1.jpeg'
   constructor() { }
 
   ngOnInit(): void {
