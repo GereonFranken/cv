@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  profilbildPath = 'D:\\Eigene-Projekte\\cv\\src\\assets\\profilbild1.jpeg'
+  profilbildPath = '.\\assets\\img\\profilbild1.jpg';
   constructor() { }
 
   ngOnInit(): void {

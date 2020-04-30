@@ -1,4 +1,6 @@
 .container {
     display: flex;
-    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
 }

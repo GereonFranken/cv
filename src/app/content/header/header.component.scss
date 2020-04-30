@@ -23,7 +23,7 @@
 }
 
 .profile-pic {
-    border-radius: 50%;
+    border-radius: 48%;
     margin-top: 4vh;
     height: 26vh;
     position: absolute;
@@ -32,8 +32,5 @@
 
 .content {
     margin-top: 4%;
-}
-
->mat-tab>* {
-    min-width: 100%;
+    // width: 92%;
 }
