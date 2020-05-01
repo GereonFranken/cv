@@ -7,14 +7,21 @@
 }
 
 .line {
-    margin-bottom: 5px;
     border-top: 1px solid #aaa;
+    margin-bottom: 4px;
+    margin-top: 12px;
 }
 
 .contact-list {
     display: flex;
     flex: 1;
     justify-content: space-around;
+    margin-top: 1em;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
 }
 
 .wrapper {

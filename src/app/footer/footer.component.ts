@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  githubSrc = '.\\assets\\img\\github.png';
+  instagramSrc = '.\\assets\\img\\instagram.png';
+  linkedInSrc = '.\\assets\\img\\linkedIn.png';
+
+  githubUrl = 'https://github.com/GereonFranken';
+  instagramUrl = 'https://www.instagram.com/gereon.f/';
+  linkedInUrl = 'https://www.linkedin.com/in/gereon-franken/';
+
   constructor() { }
 
   ngOnInit(): void {
     /**
      * Create footer bar with links
      * LinkedIn
-     * Instagram? 
+     * PDF Download? 
      */
   }
 
