@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     /**
      * create navigation bar for components of cv :
      * About me
-     * Education
+     * Background
      * Experiences
      * Hobbies
      */
