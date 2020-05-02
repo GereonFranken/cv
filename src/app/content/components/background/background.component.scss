@@ -1,14 +1,12 @@
 .table-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 1.2em;
 }
 
-div > table {
+table {
     width: 60%;
-    margin-left: 20%;
-    // FIXME: margin left only here since justify-content does not apply
 }
 
 .heading-column {
