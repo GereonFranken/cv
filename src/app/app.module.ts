@@ -9,6 +9,10 @@ import { AboutMeComponent } from './content/components/about-me/about-me.compone
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { BackgroundComponent } from './content/components/background/background.component';
+import { ExperiencesComponent } from './content/components/experiences/experiences.component';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { NestedTreeControl } from '@angular/cdk/tree';
 
 @NgModule({
   declarations: [
@@ -17,16 +21,23 @@ import { BackgroundComponent } from './content/components/background/background.
     FooterComponent,
     AboutMeComponent,
     BackgroundComponent,
+    ExperiencesComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatTabsModule,
+    BehaviorSubject,
+    MatTreeNestedDataSource,
+    NestedTreeControl,
   ],
   exports: [
     MatTableModule,
     MatTabsModule,
+    BehaviorSubject,
+    MatTreeNestedDataSource,
+    NestedTreeControl,
   ],
   providers: [],
   bootstrap: [AppComponent]

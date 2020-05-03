@@ -18,7 +18,7 @@ export class BackgroundComponent implements OnInit {
     {heading: 'Elementary School', content: '2004 - 2008, Haldern'},
     {heading: 'Secondary School', content: '2008 - 2016, Gymnasium Aspel in Rees'},
     {heading: 'Bachelor University', content: '2016 - 2019, Bachelor of Science for Sofware Engineering in Mannheim'},
-    {heading: 'Master University', content: '2019 - expected 2021, Master of Science for Big Data & Business Analytics in Düsseldorf'},
+    {heading: 'Master University', content: '2019 - expected 2022, Master of Science for Big Data & Business Analytics in Düsseldorf'},
   ];
 
   displayedColumns: string[] = ['heading', 'content'];

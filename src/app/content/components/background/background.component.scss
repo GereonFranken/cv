@@ -2,14 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1.2em;
 }
 
 table {
+    margin-top: 1.2em;
     width: 60%;
 }
 
 .heading-column {
+    color: rgb(3, 169, 244);
+    font-size: larger;
     width: 30%;
 }
 
