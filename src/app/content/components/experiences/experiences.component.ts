@@ -1,8 +1,7 @@
 import { TreeDataService, FileNode } from './../tree-data.service';
 import { Component, OnInit } from '@angular/core';
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
-
+import {MatTreeNestedDataSource} from '@angular/material/tree';
+import {NestedTreeControl} from '@angular/cdk/tree';
 @Component({
   selector: 'app-experiences',
   templateUrl: './experiences.component.html',
@@ -35,16 +34,19 @@ export class ExperiencesComponent implements OnInit {
 
   nestedTreeControl: NestedTreeControl<FileNode>;
   nestedDataSource: MatTreeNestedDataSource<FileNode>;
+  database: TreeDataService;
   
   constructor(database: TreeDataService) {
+    this.database = database;
     this.nestedTreeControl = new NestedTreeControl<FileNode>(this._getChildren);
     this.nestedDataSource = new MatTreeNestedDataSource();
-    
-    database.initialize(this.experiences);
-    database.dataChange.subscribe(data => this.nestedDataSource.data = data);
   }
   
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    
+    this.database.initialize(this.experiences);
+    this.database.dataChange.subscribe(data => this.nestedDataSource.data = data);
+  }
 
   hasNestedChild = (_: number, nodeData: FileNode) => !nodeData.type;
 
