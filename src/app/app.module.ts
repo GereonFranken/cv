@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './content/header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,9 +11,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { BackgroundComponent } from './content/components/background/background.component';
 import { ExperiencesComponent } from './content/components/experiences/experiences.component';
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { NestedTreeControl } from '@angular/cdk/tree';
+
+import { TreeDataService } from './content/components/tree-data.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { NestedTreeControl } from '@angular/cdk/tree';
     AboutMeComponent,
     BackgroundComponent,
     ExperiencesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,8 +32,8 @@ import { NestedTreeControl } from '@angular/cdk/tree';
     MatTableModule,
     MatTabsModule,
     BehaviorSubject,
-    MatTreeNestedDataSource,
-    NestedTreeControl,
+    // MatTreeNestedDataSource,
+    // NestedTreeControl,
   ],
   exports: [
     MatTableModule,
@@ -39,7 +42,7 @@ import { NestedTreeControl } from '@angular/cdk/tree';
     MatTreeNestedDataSource,
     NestedTreeControl,
   ],
-  providers: [],
+  providers: [TreeDataService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

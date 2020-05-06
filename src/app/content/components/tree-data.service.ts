@@ -20,6 +20,7 @@ export class TreeDataService {
   constructor() { }
 
   initialize(dataObject) {
+    console.log("hi")
     const data = this.buildFileTree(dataObject, 0);
     this.dataChange.next(data);
   }
