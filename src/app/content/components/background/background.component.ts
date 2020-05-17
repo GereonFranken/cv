@@ -1,3 +1,4 @@
+import { MatTableModule } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
