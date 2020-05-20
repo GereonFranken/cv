@@ -51,11 +51,7 @@ export class ExperiencesComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.dataChange.subscribe(data => this.nestedDataSource.data = data);
   }
 
   hasChild = (_: number, node: FileNode) => !!node.children && node.children.length > 0;
-
-  // private _getChildren = (node: FileNode) => node.children;
-
 }
