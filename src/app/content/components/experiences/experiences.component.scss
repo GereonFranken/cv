@@ -1,8 +1,6 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    // min-height: 200px;
-    // width: 100%;
 }
 
 .tree {
@@ -10,8 +8,14 @@
     width: 72%;
 }
 
+.node {
+    display: flex;
+}
+
 .button {
+    height: 30px;
     margin-right: 0.8em;
+    width: 40px;
 }
 
 .tree-invisible {
