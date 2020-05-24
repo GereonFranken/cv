@@ -101,6 +101,8 @@ export class ExperiencesComponent implements OnInit {
     }
   ];
 
+  emptyCircleIconPath: string = 'src\\assets\\icons\\circle-outline.svg';
+  filledCircleIconPath: string = 'src\\assets\\icons\\circle-slice.svg';
   nestedTreeControl = new NestedTreeControl<FileNode>(node => node.children);
   nestedDataSource = new MatTreeNestedDataSource<FileNode>();
   

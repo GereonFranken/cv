@@ -6,7 +6,11 @@
           <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name"
             [disabled]="!node.children" class="button">
             <mat-icon at-icon class="mat-icon-rtl-mirror">
-              {{!node.children ? 'chevron_right' : nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              {{!node.children 
+                ? 'chevron_right' 
+                : nestedTreeControl.isExpanded(node) 
+                  ? 'expand_more' 
+                  : 'chevron_right'}}
             </mat-icon>
           </button>
           {{node.name}}

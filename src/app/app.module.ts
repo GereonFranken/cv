@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { BehaviorSubject } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
@@ -25,7 +24,6 @@ import { ExperiencesComponent } from './content/components/experiences/experienc
     ExperiencesComponent,
   ],
   imports: [
-    // BehaviorSubject,
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -34,9 +32,9 @@ import { ExperiencesComponent } from './content/components/experiences/experienc
     MatTreeModule,
   ],
   exports: [
+    MatIconModule,
     MatTableModule,
     MatTabsModule,
-    // BehaviorSubject,
     MatTreeModule,
   ],
   providers: [],
