@@ -11,7 +11,7 @@ export class BackgroundComponent implements OnInit {
   personalData: {heading: string, content: string}[] = [
     {heading: 'Name', content: 'Gereon Franken'},
     {heading: 'Birthday', content: 'August 25, 1998'},
-    {heading: 'Job describtion', content: 'Agile Software Engineer'},
+    {heading: 'Job description', content: 'Agile Software Engineer'},
     {heading: 'Current place of living', content: 'Düsseldorf, Nordrhein - Westfalen'},
   ];
 

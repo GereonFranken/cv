@@ -13,6 +13,7 @@ import { BackgroundComponent } from './content/components/background/background.
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './content/header/header.component';
 import { ExperiencesComponent } from './content/components/experiences/experiences.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,14 @@ import { ExperiencesComponent } from './content/components/experiences/experienc
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MatIconModule,
     MatTableModule,
     MatTabsModule,
     MatTreeModule,
   ],
   exports: [
+    MatButtonModule,
     MatIconModule,
     MatTableModule,
     MatTabsModule,

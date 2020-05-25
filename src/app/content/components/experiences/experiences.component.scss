@@ -10,12 +10,11 @@
 
 .node {
     display: flex;
+    align-items: center;
 }
 
 .button {
-    height: 30px;
     margin-right: 0.8em;
-    width: 40px;
 }
 
 .tree-invisible {
