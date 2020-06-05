@@ -1,7 +1,5 @@
-import { BehaviorSubject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export class FileNode {
   children?: FileNode[];
@@ -15,9 +13,8 @@ export class FileNode {
 
 export class ExperiencesComponent implements OnInit {
 
-  dataChange = new BehaviorSubject<FileNode[]>([]);
-
-  get data(): FileNode[] { return this.dataChange.value; }
+  faCheck = faCheck;
+  selectedDetail: '' | 'Bachelor' | 'Master' = '';
 
   experiences: FileNode[] = [
     {
@@ -103,15 +100,9 @@ export class ExperiencesComponent implements OnInit {
 
   emptyCircleIconPath: string = 'src\\assets\\icons\\circle-outline.svg';
   filledCircleIconPath: string = 'src\\assets\\icons\\circle-slice.svg';
-  nestedTreeControl = new NestedTreeControl<FileNode>(node => node.children);
-  nestedDataSource = new MatTreeNestedDataSource<FileNode>();
   
-  constructor() {
-    this.nestedDataSource.data = this.experiences;
-  }
+  constructor() { }
   
   ngOnInit(): void {
   }
-
-  hasChild = (_: number, node: FileNode) => !!node.children && node.children.length > 0;
 }

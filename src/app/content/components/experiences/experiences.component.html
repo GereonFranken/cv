@@ -1,23 +1,40 @@
-<div class="wrapper">
-  <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="tree">
-    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
-      <li>
-        <div class="node">
-          <button mat-button matTreeNodeToggle [disabled]="!node.children" class="button">
-            <mat-icon>
-              {{!node.children 
-                ? 'radio_button_checked' 
-                : nestedTreeControl.isExpanded(node) 
-                  ? 'radio_button_checked' 
-                  : 'radio_button_unchecked'}}
-            </mat-icon>
-          </button>
-          {{node.name}}
-        </div>
-        <ul [class.tree-invisible]="!nestedTreeControl.isExpanded(node)">
-          <ng-container matTreeNodeOutlet></ng-container>
-        </ul>
-      </li>
-    </mat-nested-tree-node>
-  </mat-tree>
-</div>
+<ul class="timeline">
+  <div class="details-box">
+    <div class="details" *ngIf="selectedDetail == 'Bachelor'">
+      <div class="heading">Software Engineer Internship @ Technical Solutions, Engineering Resolution Team</div>
+      <div class="content">
+        The goal of the internship project was to create Microsoft Windows help files which 
+        show information and LED patterns for fiber channel devices of Brocade and Cisco. These help files with the LED 4
+        patterns were created using HTML, Java Script and a Tool to form animated GIF graphics. These help files were 
+        fabricated to provide better support of storage systems.
+      </div>
+    </div>
+    <div class="details" *ngIf="selectedDetail == 'Master'">
+      <div class="heading">Agile Software Engineer Project: Frontend Development</div>
+      <div class="content">
+        Project to develop a frontend with angular for an E2E application. Besides the frontend work with html, css and typescript work
+        it included version control inside the team with Bitbucket and working on api definitions with swagger.
+      </div>
+    </div>
+  </div>
+  <li class="timeline-item">
+    <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
+    <div class="timeline-panel" (click)="selectedDetail == 'Bachelor' ? selectedDetail = '' : selectedDetail = 'Bachelor'">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Bachelor for Business Information Systems: Software Engineering</h4>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> @ Hewlett Packard Enterprise</small></p>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016 - 2019</small></p>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-item">
+    <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
+    <div class="timeline-panel" (click)="selectedDetail == 'Master' ? selectedDetail = '' : selectedDetail = 'Master'">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Cooperate Master for Big Data & Business Analytics</h4>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> @ DXC Technology</small></p>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019 - expected 2022</small></p>
+      </div>
+    </div>
+  </li>
+</ul>
