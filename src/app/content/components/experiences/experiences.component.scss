@@ -18,44 +18,47 @@ $brand-info: #5bc0de;
 $brand-warning: #d1bd10;
 $brand-danger: #ba1f1f;
 
+.details-box {
+    border-radius: 2px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin-top: 34px;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0px;
+    text-align: left;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    width: 46%;
+
+    .details {
+        padding: 1.2em 1.2em 1.2em 1.2em;
+        .heading {
+            font-weight: bold;
+        }
+        .content {
+            line-height: 1.6em;
+            padding-top: 0.8em;
+        }
+    }
+}
+
 .timeline {
     list-style: none;
     padding: 20px;
     position: relative;
     &:before {
-        top: 40px;
-        bottom: 0;
-        position: absolute;
-        content: " ";
-        width: 3px;
         background-color: #eeeeee;
+        bottom: 0;
+        content: " ";
         left: 50%;
         margin-left: -1.5px;
+        position: absolute;
+        top: 40px;
+        width: 3px;
     }
-    .details-box {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        text-align: left;
-        height: 40vh;
-        width: 46%;
-        float: right;
-        border-radius: 2px;
-        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        overflow-y: scroll;
-
-        .details {
-            padding: 1.2em 1.2em 1.2em 1.2em;
-            .heading {
-                font-weight: bold;
-            }
-            .content {
-                padding-top: 0.8em;
-                line-height: 1.6em;
-            }
-        }
-    }
+    
     .timeline-item {
         margin-bottom: 20px;
         position: relative;
@@ -116,7 +119,7 @@ $brand-danger: #ba1f1f;
             // border: 1px solid $gray-light;
             background: #ffffff;
             border-radius: 2px;
-            padding: 20px;
+            padding: 16px;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
             &:before {
@@ -142,17 +145,5 @@ $brand-danger: #ba1f1f;
                 margin-top: 5px;
             }
         }
-    }
-    .timeline-panel-right {
-        position: relative;
-        text-align: left;
-        width: 46%;
-        float: right;
-        left: 16px;
-        background: #ffffff;
-        border-radius: 2px;
-        padding: 20px;
-        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     }
 }
