@@ -21,8 +21,8 @@
     </div>
   </div>
 <ul class="timeline">
-  
-  <li class="timeline-item">
+  <li class="timeline-item" 
+    [ngClass]="{'highlighted': selectedDetail == 'Bachelor', 'equallighted': selectedDetail == ''}">
     <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
     <div class="timeline-panel" (click)="selectedDetail == 'Bachelor' ? selectedDetail = '' : selectedDetail = 'Bachelor'">
       <div class="timeline-heading">
@@ -32,7 +32,8 @@
       </div>
     </div>
   </li>
-  <li class="timeline-item">
+  <li class="timeline-item"
+    [ngClass]="{'highlighted': selectedDetail == 'Master', 'equallighted': selectedDetail == ''}">
     <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
     <div class="timeline-panel" (click)="selectedDetail == 'Master' ? selectedDetail = '' : selectedDetail = 'Master'">
       <div class="timeline-heading">

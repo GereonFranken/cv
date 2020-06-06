@@ -32,6 +32,7 @@ $brand-danger: #ba1f1f;
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     width: 46%;
 
+    
     .details {
         padding: 1.2em 1.2em 1.2em 1.2em;
         .heading {
@@ -62,6 +63,7 @@ $brand-danger: #ba1f1f;
     .timeline-item {
         margin-bottom: 20px;
         position: relative;
+        transform: perspective(10px) translateZ(-2px); // lowlighted as default since its the most occuring
         &:before,
         &:after {
             content: "";
@@ -145,5 +147,11 @@ $brand-danger: #ba1f1f;
                 margin-top: 5px;
             }
         }
+    }
+    .highlighted {
+        transform: perspective(10px) translateZ(0px) !important;
+    }
+    .equallighted {
+        transform: perspective(10px) translateZ(-1px) !important; 
     }
 }
