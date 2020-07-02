@@ -15,6 +15,7 @@ export class ExperiencesComponent implements OnInit {
 
   faCheck = faCheck;
   selectedDetail: '' | 'Bachelor' | 'Master' = '';
+  
 
   experiences: FileNode[] = [
     {

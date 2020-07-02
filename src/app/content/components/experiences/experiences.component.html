@@ -1,29 +1,34 @@
 <div class="details-box">
-    <div class="details" *ngIf="selectedDetail == ''">
-      <div class="content">Please click on a chapter to the left to see details here ...
-      </div>
-    </div>
-    <div class="details" *ngIf="selectedDetail == 'Bachelor'">
-      <div class="heading">Software Engineer Internship @ Technical Solutions, Engineering Resolution Team</div>
-      <div class="content">
-        The goal of the internship project was to create Microsoft Windows help files which 
-        show information and LED patterns for fiber channel devices of Brocade and Cisco. These help files with the LED 4
-        patterns were created using HTML, Java Script and a Tool to form animated GIF graphics. These help files were 
-        fabricated to provide better support of storage systems.
-      </div>
-    </div>
-    <div class="details" *ngIf="selectedDetail == 'Master'">
-      <div class="heading">Agile Software Engineer Project: Frontend Development</div>
-      <div class="content">
-        Project to develop a frontend with angular for an E2E application. Besides the frontend work with html, css and typescript work
-        it included version control inside the team with Bitbucket and working on api definitions with swagger.
-      </div>
+  <div class="details" *ngIf="selectedDetail == ''">
+    <div class="details-content">Please click on a chapter to the left to see details here ...
     </div>
   </div>
+  <div class="details" *ngIf="selectedDetail == 'Bachelor'">
+    <div class="details-heading">Software Engineer Internship @ Technical Solutions, Engineering Resolution Team</div>
+    <div class="details-content">
+      The goal of the internship project was to create Microsoft Windows help files which 
+      show information and LED patterns for fiber channel devices of Brocade and Cisco. These help files with the LED 4
+      patterns were created using HTML, Java Script and a Tool to form animated GIF graphics. These help files were 
+      fabricated to provide better support of storage systems.
+    </div>
+    <div class="details-heading">{{experiences[0].children[0].children[1].name}}</div>
+    <div class="details-content">{{experiences[0].children[0].children[0].children[0].name}}</div>
+  </div>
+  <div class="details" *ngIf="selectedDetail == 'Master'">
+    <div class="details-heading">Agile Software Engineer Project: Frontend Development</div>
+    <div class="details-content">
+      Project to develop a frontend with angular for an E2E application. Besides the frontend work with html, css and typescript work
+      it included version control inside the team with Bitbucket and working on api definitions with swagger.
+    </div>
+  </div>
+</div>
 <ul class="timeline">
   <li class="timeline-item" 
     [ngClass]="{'highlighted': selectedDetail == 'Bachelor', 'equallighted': selectedDetail == ''}">
-    <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
+    <div class="timeline-badge"
+      [ngClass]="{'success': selectedDetail == 'Bachelor'}">
+      <fa-icon [icon]="faCheck"></fa-icon>
+    </div>
     <div class="timeline-panel" (click)="selectedDetail == 'Bachelor' ? selectedDetail = '' : selectedDetail = 'Bachelor'">
       <div class="timeline-heading">
         <h4 class="timeline-title">Bachelor for Business Information Systems: Software Engineering</h4>
@@ -34,7 +39,9 @@
   </li>
   <li class="timeline-item"
     [ngClass]="{'highlighted': selectedDetail == 'Master', 'equallighted': selectedDetail == ''}">
-    <div class="timeline-badge"><fa-icon [icon]="faCheck"></fa-icon></div>
+    <div class="timeline-badge" [ngClass]="{'success': selectedDetail == 'Master'}">
+      <fa-icon [icon]="faCheck"></fa-icon>
+    </div>
     <div class="timeline-panel" (click)="selectedDetail == 'Master' ? selectedDetail = '' : selectedDetail = 'Master'">
       <div class="timeline-heading">
         <h4 class="timeline-title">Cooperate Master for Big Data & Business Analytics</h4>
