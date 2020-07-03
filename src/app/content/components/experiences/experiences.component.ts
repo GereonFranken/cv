@@ -4,6 +4,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export class FileNode {
   children?: FileNode[];
   name: string;
+  duration?: string;
 }
 @Component({
   selector: 'app-experiences',
@@ -16,16 +17,23 @@ export class ExperiencesComponent implements OnInit {
   faCheck = faCheck;
   selectedDetail: '' | 'Bachelor' | 'Master' = '';
   
+  // experiences2 = {
+  //   HPE: {
+
+  //   }
+  // };
+
 
   experiences: FileNode[] = [
     {
-      name: 'Hewlett Packard Enterprise (HPE)',
+      name: 'Cooperative Bachelor for Business Information Sytems: Software Engineering',
       children: [
         {
-          name: 'Cooperative Bachelor for Business Information Sytems: Software Engineering',
+          name: 'Hewlett Packard Enterprise (HPE)',
           children: [
             {
-              name: 'Internship @ Technical Solutions, Engineering Resolution Team in Ratingen, Nordrhein-Westfalen, Germany (5 month)',
+              name: 'Internship @ Technical Solutions, Engineering Resolution Team in Ratingen, Nordrhein-Westfalen, Germany',
+              duration: '5 months',
               children: [              
                 {
                   name: `The goal of the internship project was to create Microsoft Windows help files which show information 
@@ -36,7 +44,8 @@ export class ExperiencesComponent implements OnInit {
               ],
             },
             {
-              name: 'Internship @ WorldWide Distribution Team in Ratingen, Nordrhein-Westfalen, Germany (3 month)',
+              name: 'Internship @ WorldWide Distribution Team in Ratingen, Nordrhein-Westfalen, Germany',
+              duration: '3 months',
               children: [              
                 {
                   name: `Analysis of existing QlikSense Business Intelligence Dashboards to fix mistakes, design problems,
@@ -46,7 +55,8 @@ export class ExperiencesComponent implements OnInit {
               ],
             },
             {
-              name: 'Internship @Hybrid IT: Big Data Engineering Team in Andover, Massachusetts, USA (4 month)',
+              name: 'Internship @Hybrid IT: Big Data Engineering Team in Andover, Massachusetts, USA',
+              duration: '4 months',
               children: [              
                 {
                   name: `Development of a Continuous Integration/ Continuous Deployment Pipeline for building, deploying and 
@@ -59,24 +69,12 @@ export class ExperiencesComponent implements OnInit {
             },
           ],
         },
-      ], 
-    },
-    {
-      name: 'DXC Technology',
-      children: [
         {
-          name: 'Cooperative Bachelor for Business Information Sytems: Software Engineering',
+          name: 'DXC Technology',
           children: [
             {
-              name:'Internship @ Global Rapid Response Team in Ratingen, Nordrhein-Westfalen, Germany (4 month)',
-              children: [
-                {
-                  name: `Bachelor thesis about the automation of Continuous Integration Pipelines`,
-                }
-              ]
-            },
-            {
-              name:'Software Engineer Internship @ Global Rapid Response Team in Ratingen, Nordrhein-Westfalen, Germany (4 month)',
+              name:'Software Engineer Internship @ Global Rapid Response Team in Ratingen, Nordrhein-Westfalen, Germany',
+              duration: '4 months',
               children: [
                 {
                   name: `Programming of a tool to automatically detect middleware instances (in this case JBoss/ WildFly Application 
@@ -84,14 +82,30 @@ export class ExperiencesComponent implements OnInit {
                       internal database.`,
                 }
               ]
+            },
+            {
+              name:'Internship @ Cloud and Automation in Ratingen, Nordrhein-Westfalen, Germany',
+                duration: '4 months',
+                children: [
+                  {
+                    name: `Bachelor thesis about the automation of Continuous Integration Pipelines.`,
+                  }
+                ]
             }
           ]
         },
+      ], 
+    },
+    {
+      name: 'Cooperate Master Student for Big Data and Business Analytics',
+      children: [
+        
         {
-          name:'Cooperate Master Student for Big Data and Business Analytics',
+          name:'DXC Technology',
           children: [
             {
-              name: 'Agile Software Engineer in various projects (October 2019 - today)',
+              name: 'Agile Software Engineer in various projects',
+              duration: 'October 2019 - today'
             }
           ]
         }

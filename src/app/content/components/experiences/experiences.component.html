@@ -3,24 +3,20 @@
     <div class="details-content">Please click on a chapter to the left to see details here ...
     </div>
   </div>
-  <div class="details" *ngIf="selectedDetail == 'Bachelor'">
-    <div class="details-heading">Software Engineer Internship @ Technical Solutions, Engineering Resolution Team</div>
-    <div class="details-content">
-      The goal of the internship project was to create Microsoft Windows help files which 
-      show information and LED patterns for fiber channel devices of Brocade and Cisco. These help files with the LED 4
-      patterns were created using HTML, Java Script and a Tool to form animated GIF graphics. These help files were 
-      fabricated to provide better support of storage systems.
+  <ng-container *ngIf="selectedDetail == 'Bachelor'">
+    <div *ngFor="let company of experiences[0].children; let i = index">
+      <div class="details" *ngFor="let project of experiences[0].children[i].children">
+        <div class="details-heading">{{project.duration}}<br>{{company.name}}<br>{{project.name}}</div>
+        <div class="details-content">{{project.children[0].name}}</div>
+      </div>
     </div>
-    <div class="details-heading">{{experiences[0].children[0].children[1].name}}</div>
-    <div class="details-content">{{experiences[0].children[0].children[0].children[0].name}}</div>
-  </div>
-  <div class="details" *ngIf="selectedDetail == 'Master'">
-    <div class="details-heading">Agile Software Engineer Project: Frontend Development</div>
-    <div class="details-content">
-      Project to develop a frontend with angular for an E2E application. Besides the frontend work with html, css and typescript work
-      it included version control inside the team with Bitbucket and working on api definitions with swagger.
+  </ng-container>
+  <ng-container *ngIf="selectedDetail == 'Master'">
+    <div class="details" *ngFor="let project of experiences[1].children[0].children">
+      <div class="details-heading">{{project.duration}}<br>{{project.name}}</div>
+      <div class="details-content">{{project.children[0].name}}</div>
     </div>
-  </div>
+  </ng-container>
 </div>
 <ul class="timeline">
   <li class="timeline-item" 
