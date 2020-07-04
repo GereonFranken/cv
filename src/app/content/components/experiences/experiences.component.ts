@@ -104,8 +104,14 @@ export class ExperiencesComponent implements OnInit {
           name:'DXC Technology',
           children: [
             {
-              name: 'Agile Software Engineer in various projects',
-              duration: 'October 2019 - today'
+              name: 'Agile Software Engineer project in Angular development',
+              duration: 'October 2019 - today',
+              children:[
+                {
+                  name: `Working in a team on an Angular Frontend in a Scrum setup. Therefore, also experiences in 
+                        restful api definitions were made.`
+                },
+              ]
             }
           ]
         }

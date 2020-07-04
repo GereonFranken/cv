@@ -6,5 +6,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .mat-tab-body-content {
-    overflow: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.mat-tab-body.mat-tab-body-active {
+    overflow-y: hidden !important;
 }
