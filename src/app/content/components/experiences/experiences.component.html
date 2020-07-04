@@ -23,26 +23,25 @@
     [ngClass]="{'highlighted': selectedDetail == 'Bachelor', 'equallighted': selectedDetail == ''}">
     <div class="timeline-badge"
       [ngClass]="{'success': selectedDetail == 'Bachelor'}">
-      <fa-icon [icon]="faCheck"></fa-icon>
+      2016<br>-<br>2019
     </div>
     <div class="timeline-panel" (click)="selectedDetail == 'Bachelor' ? selectedDetail = '' : selectedDetail = 'Bachelor'">
       <div class="timeline-heading">
         <h4 class="timeline-title">Bachelor for Business Information Systems: Software Engineering</h4>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> @ Hewlett Packard Enterprise</small></p>
-        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016 - 2019</small></p>
       </div>
     </div>
   </li>
   <li class="timeline-item"
     [ngClass]="{'highlighted': selectedDetail == 'Master', 'equallighted': selectedDetail == ''}">
     <div class="timeline-badge" [ngClass]="{'success': selectedDetail == 'Master'}">
-      <fa-icon [icon]="faCheck"></fa-icon>
+      2019<br>-<br>expected 2022
     </div>
     <div class="timeline-panel" (click)="selectedDetail == 'Master' ? selectedDetail = '' : selectedDetail = 'Master'">
       <div class="timeline-heading">
         <h4 class="timeline-title">Cooperate Master for Big Data & Business Analytics</h4>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> @ DXC Technology</small></p>
-        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019 - expected 2022</small></p>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> </small></p>
       </div>
     </div>
   </li>
