@@ -5,18 +5,11 @@
     list-style-type: none;
 }
 
-$text-color: #373737;
-$gray-base: #494949;
-$gray-darker: #222;
 $gray-dark: #333;
 $gray: #555;
 $gray-light: #777;
-$gray-lighter: #eee;
 $brand-primary: #1f9eba;
 $brand-success: #59ba1f;
-$brand-info: #5bc0de;
-$brand-warning: #d1bd10;
-$brand-danger: #ba1f1f;
 
 .details-box {
     border-radius: 2px;
@@ -29,7 +22,7 @@ $brand-danger: #ba1f1f;
     position: absolute;
     right: 0px;
     text-align: left;
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.175);
     width: 46%;
     z-index: 2;
 
@@ -108,17 +101,8 @@ $brand-danger: #ba1f1f;
             &.primary {
                 background-color: $brand-primary;
             }
-            &.info {
-                background-color: $brand-info;
-            }
             &.success {
                 background-color: $brand-success;
-            }
-            &.warning {
-                background-color: $brand-warning;
-            }
-            &.danger {
-                background-color: $brand-danger;
             }
         }
         .timeline-panel {

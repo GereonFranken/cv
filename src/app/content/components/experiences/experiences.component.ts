@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export class FileNode {
   children?: FileNode[];
@@ -13,16 +12,8 @@ export class FileNode {
 })
 
 export class ExperiencesComponent implements OnInit {
-
-  faCheck = faCheck;
-  selectedDetail: '' | 'Bachelor' | 'Master' = '';
   
-  // experiences2 = {
-  //   HPE: {
-
-  //   }
-  // };
-
+  selectedDetail: '' | 'Bachelor' | 'Master' = '';
 
   experiences: FileNode[] = [
     {

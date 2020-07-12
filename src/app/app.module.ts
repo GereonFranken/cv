@@ -15,6 +15,7 @@ import { ExperiencesComponent } from './content/components/experiences/experienc
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { HobbiesComponent } from './content/components/hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
     AboutMeComponent,
     BackgroundComponent,
     ExperiencesComponent,
+    HobbiesComponent,
   ],
   imports: [
     BrowserModule,
