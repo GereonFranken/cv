@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,9 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './content/header/header.component';
 import { ExperiencesComponent } from './content/components/experiences/experiences.component';
 import { MatButtonModule } from '@angular/material/button';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { HobbiesComponent } from './content/components/hobbies/hobbies.component';
+import { PassionsComponent } from './content/components/passions/passions.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { HobbiesComponent } from './content/components/hobbies/hobbies.component
     AboutMeComponent,
     BackgroundComponent,
     ExperiencesComponent,
-    HobbiesComponent,
+    PassionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +35,7 @@ import { HobbiesComponent } from './content/components/hobbies/hobbies.component
     MatTableModule,
     MatTabsModule,
     FontAwesomeModule,
+    FormsModule,
   ],
   exports: [
     MatButtonModule,
