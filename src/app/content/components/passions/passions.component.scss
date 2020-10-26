@@ -1,5 +1,25 @@
-.width {
-    width: 40px;
-    height: 40px;
-    margin-left: 200px;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 150px;
+        height: 100px;
+        width: 100px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        border: 4px dashed black;
+    }
+}
+
+.polygonIcon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }

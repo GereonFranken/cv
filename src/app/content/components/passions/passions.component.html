@@ -1,1 +1,14 @@
-<fa-icon [icon]="['fas', 'chess']" size="3x"></fa-icon>
+<div class="wrapper">
+    <div class="circle">{{passion}}</div>
+<div>
+<div *ngFor="let icon of icons;let i = index;">
+    <div *ngIf="calculateVector(angle*i) as newAngle">
+        <fa-icon
+            class="polygonIcon"
+            [ngStyle]="{'transform':'translateX('+ newAngle.x +'px) translateY('+ newAngle.y +'px)'}"
+            [icon]="['fas', icon.iconName]" 
+            size="3x" 
+            (click)="handleIconClick(icon.passion)">
+        </fa-icon>
+    </div>
+</div>
