@@ -24,27 +24,27 @@ export class PassionsComponent implements OnInit {
   // (numSides -2) * 180 is the formula for the sum of angles in a polygon
   anglesSum = (this.numSides - 2) * 180;
   angle = 180 - this.anglesSum / this.numSides;
-  polygonDistance = 120 //px
+  polygonDistance = 170 //px
   icons = [
     {
       'iconName': 'chess',
-      'passion': 'chess',
+      'passion': 'Chess',
     },
     {
       'iconName': 'futbol',
-      'passion': 'soccer',
+      'passion': 'Soccer',
     },
     {
       'iconName': 'laptop',
-      'passion': 'gaming',
+      'passion': 'Gaming & Programming',
     },
     {
       'iconName': 'heartbeat',
-      'passion': 'fitness',
+      'passion': 'Fitness',
     },
     {
       'iconName': 'music',
-      'passion': 'music',
+      'passion': 'Music',
     },
   ]
 

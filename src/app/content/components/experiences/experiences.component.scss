@@ -25,6 +25,7 @@ $brand-success: #59ba1f;
     -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.175);
     width: 46%;
     z-index: 2;
+    background-color: white;
 
     
     .details {
@@ -33,7 +34,7 @@ $brand-success: #59ba1f;
         padding-bottom: 1.2em;
         .details-heading {
             font-weight: bold;
-            padding-top: 2em;
+            padding-top: 1em;
         }
         .details-content {
             line-height: 1.6em;
