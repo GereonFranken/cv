@@ -12,6 +12,7 @@
 <div *ngFor="let icon of icons;let i = index;">
     <div *ngIf="calculateVector(angle*i) as newAngle">
         <fa-icon
+            [id]="'icon' + i"
             class="polygonIcon"
             [ngStyle]="{transform: transformIcon(newAngle, icon.passion, i), '-webkit-transition': '1s ease-in-out'}"
             [icon]="['fas', icon.iconName]" 

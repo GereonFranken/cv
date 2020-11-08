@@ -95,7 +95,10 @@ export class PassionsComponent implements OnInit {
     } else if (this.passion === passion) {
       return 'translateX('+ -this.polygonDistance +'px) translateY('+ -this.polygonDistance +'px)';
     } else {
-      return 'translateX('+ this.polygonDistance +'px) translateY('+ ((iterationCtr*62)-(Object.keys(Passion).length/2*42)) +'px)'
+      const xTranslation = (70 - document.getElementById('icon' + iterationCtr).clientWidth) / 2 + this.polygonDistance;
+      console.log({xTranslation, idWidth: document.getElementById('icon' + iterationCtr).clientWidth})
+      return 'translateX('+ xTranslation + 'px) translateY('+
+        ((iterationCtr*68)-(Object.keys(Passion).length/2*42)) +'px)'
     }
   }
 }
