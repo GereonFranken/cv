@@ -2,20 +2,43 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-top: 20px;
 
-    .circle {
+    .center {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        
+
         margin: 150px;
-        height: 100px;
+        height: 125px;
+        background-color: white;
+        border-style: solid;
+        width: 155px;
+        background-size: 155px 125px;
+        border-radius: 20px;
+        font-size: medium;
+    }
+
+    .clickedCenter {
+        display: flex;
+        justify-content: center;
+        
+        height: 400px;
+        background-color: white;
+        border-style: solid;
+        width: 155px;
+        background-size: 155px 125px;
+        border-radius: 20px;
+        font-size: medium;
+    }
+
+    .close {
+        background-color: red;
+        height: 50px;
         width: 100px;
-        -moz-border-radius: 50px;
-        -webkit-border-radius: 50px;
-        border-radius: 50px;
-        border: 4px dashed black;
+        position: absolute;
+        bottom: 10px;
     }
 }
 
