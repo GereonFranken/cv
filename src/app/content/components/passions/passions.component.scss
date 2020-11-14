@@ -3,6 +3,8 @@
     justify-content: center;
     width: 100%;
     padding-top: 20px;
+    min-height: 400px;
+    max-height: 450px;
 
     .center {
         display: flex;
@@ -24,21 +26,23 @@
         display: flex;
         justify-content: center;
         
-        height: 400px;
         background-color: white;
         border-style: solid;
-        width: 155px;
+        width: 175px;
         background-size: 155px 125px;
         border-radius: 20px;
         font-size: medium;
     }
 
     .close {
-        background-color: red;
-        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E14B4B;
+        height: 30px;
         width: 100px;
         position: absolute;
-        bottom: 10px;
+        bottom: 20px;
     }
 }
 

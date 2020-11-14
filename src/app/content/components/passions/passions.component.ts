@@ -3,13 +3,10 @@ import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import { faChess, faFutbol, faLaptop, faMusic, faRunning } from '@fortawesome/free-solid-svg-icons';
 import {
   trigger,
-  state,
   style,
   animate,
   transition,
-  keyframes,
 } from '@angular/animations';
-import { delay } from 'rxjs-compat/operator/delay';
 
 export enum Passion {
   none = '',
@@ -30,9 +27,12 @@ export enum Passion {
         animate('1.5s', style({ opacity: 1 }))
       ]),
       transition(':leave', [
-        style({ transform: 'translateX(0%)' }),
-        animate('.5s', style({ transform: 'translateY(-100%)', opacity: 0.2 }))
-      ])
+        style({ opacity: 1 }),
+        animate('.5s', style({ opacity: 0, transform: 'translateY(-50%)' }))
+      ]),
+      transition('* => *', [
+        animate('1s')
+      ]),
     ])
   ]
 })
@@ -40,7 +40,7 @@ export enum Passion {
 export class PassionsComponent implements OnInit {
 
   passion: Passion = Passion.none;
-
+  myEnum: typeof Passion = Passion;
   // len(Passion) -1 is num of all hobbies/ number of sides of the created polygon
   numSides = Object.keys(Passion).length -1;
   // (numSides -2) * 180 is the formula for the sum of angles in a polygon
@@ -72,6 +72,18 @@ export class PassionsComponent implements OnInit {
     },
   ]
 
+  contents = {
+    chess: ['Elo:1600 (approximated)', 'Favorite Human Player:Magnus Carlsen & Bobby Fischer', 'Favorite Engine:Alphazero',
+      'Favorite Opening:Ruy Lopez variations as white & Berlin Defense as black'],
+    soccer: ['Played for: 10 years', 'Position: Striker', `Devision:So low that the referee usually spends more time on the 
+      middle line than not on it`],
+    computer: ['Main Uses:Programming, Gaming, Music', `Tool for:Everything. From communication with friends
+      to learning on my own.`],
+    fitness: ['Main sports:Soccer, Gym', 'Other sports:Table Tennis, Badminton, Volleyball',
+      'How:Primarily playing with friends. Fitness while spending time together.'],
+    music: ['Instrument:Piano', 'Played for:10 years', 'Favorite Genre:Rap,EDM'],
+  };
+
   constructor(private library: FaIconLibrary) {
     this.library.addIcons(faChess, faFutbol, faLaptop, faRunning, faMusic);
   }
@@ -85,6 +97,10 @@ export class PassionsComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  getPassion(passion: Passion) {
+    return Object.keys(Passion).filter((x) => Passion[x] == passion)[0];
+  }
+
   handleIconClick(clickedPassion: Passion) {
     this.passion = clickedPassion;
   }
@@ -96,7 +112,6 @@ export class PassionsComponent implements OnInit {
       return 'translateX('+ -this.polygonDistance +'px) translateY('+ -this.polygonDistance +'px)';
     } else {
       const xTranslation = (70 - document.getElementById('icon' + iterationCtr).clientWidth) / 2 + this.polygonDistance;
-      console.log({xTranslation, idWidth: document.getElementById('icon' + iterationCtr).clientWidth})
       return 'translateX('+ xTranslation + 'px) translateY('+
         ((iterationCtr*68)-(Object.keys(Passion).length/2*42)) +'px)'
     }
