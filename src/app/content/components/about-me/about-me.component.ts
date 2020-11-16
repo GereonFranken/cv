@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
+  selectedLanguage: 'english' | 'german' = 'english';
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

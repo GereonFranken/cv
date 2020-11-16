@@ -5,9 +5,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
-import { MatIconModule } from '@angular/material/icon';
 
 import { AboutMeComponent } from './content/components/about-me/about-me.component';
 import { BackgroundComponent } from './content/components/background/background.component';
@@ -31,7 +33,9 @@ import { PassionsComponent } from './content/components/passions/passions.compon
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatCardModule,
     MatIconModule,
+    MatRadioModule,
     MatTableModule,
     MatTabsModule,
     FontAwesomeModule,

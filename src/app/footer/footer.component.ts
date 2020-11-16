@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -14,6 +15,8 @@ export class FooterComponent implements OnInit {
   githubUrl = 'https://github.com/GereonFranken';
   instagramUrl = 'https://www.instagram.com/gereon.f/';
   linkedInUrl = 'https://www.linkedin.com/in/gereon-franken/';
+
+  star = faStar;
 
   constructor() { }
 

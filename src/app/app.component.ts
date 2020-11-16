@@ -1,19 +1,16 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
+import { faChess, faFutbol, faLaptop, faMusic, faRunning, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [
-    trigger('backgroundMovement', [
-      transition(':enter', [
-        style({ position: 'absolute' }),
-        animate('20s', style({ transform: 'translateY(50%) scale(2)', 'z-index': -11})),
-      ]),
-    ]),
-  ],
 })
 export class AppComponent {
   title = 'cv';
+  constructor(private library: FaIconLibrary) {
+    this.library.addIcons(faChess, faFutbol, faLaptop, faRunning, faMusic, faStar );
+  }
+
 }

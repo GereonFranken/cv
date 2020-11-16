@@ -6,13 +6,6 @@
     align-items: center;
 }
 
-// .header-background {
-//     background-color: rgb(3, 169, 244);
-//     height: 16vh;
-//     opacity: 0.7;
-//     width: 100%;
-// }
-
 .header-wrapper {
     display: flex;
     flex: 1;
@@ -20,6 +13,11 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.mat-tab-label {
+    color: #06bdce;
+    font-size: large;
 }
 
 .profile-pic {
@@ -31,6 +29,6 @@
 }
 
 .content {
-    margin-top: 4%;
-    width: 92%;
+    margin-top: 6%;
+    width: 94%;
 }

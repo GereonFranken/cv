@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
-import { faChess, faFutbol, faLaptop, faMusic, faRunning } from '@fortawesome/free-solid-svg-icons';
 import {
   trigger,
   style,
@@ -84,8 +82,8 @@ export class PassionsComponent implements OnInit {
     music: ['Instrument:Piano', 'Played for:10 years', 'Favorite Genre:Rap,EDM'],
   };
 
-  constructor(private library: FaIconLibrary) {
-    this.library.addIcons(faChess, faFutbol, faLaptop, faRunning, faMusic);
+  constructor() {
+    
   }
 
   calculateVector(angle: number) {
