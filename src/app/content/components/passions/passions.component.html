@@ -1,17 +1,17 @@
 <div class="wrapper" ng-app="center">
     <div mat-card [ngClass]="(passion==='') ? 'center' : 'clickedCenter'" style="-webkit-transition: 1s ease-in-out">
-        <div *ngIf="passion===''; else selectedPassion" @buttonEntry>
+        <div *ngIf="passion===''; else selectedPassion" @elementEntry>
             Please click on a passion of your choice
         </div>
         <ng-template #selectedPassion>
-            <div *ngIf="getPassion(passion) as passionKey" style="margin:10px 10px" @buttonEntry>
+            <div *ngIf="getPassion(passion) as passionKey" style="margin:10px 10px" @elementEntry>
                 <div *ngFor="let fact of contents[passionKey]">
                     <div style="font-weight: bold;">{{fact.split(":")[0]}}</div>
                     <div>{{fact.split(":")[1]}}</div>
                     <br>
                 </div>
             </div>
-            <button mat-raised-button class="close" (click)="passion = ''" @buttonEntry>Close</button>
+            <button mat-raised-button class="close" (click)="passion = ''" @elementEntry>Close</button>
         </ng-template>
     </div>
 </div>

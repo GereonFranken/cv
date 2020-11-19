@@ -19,7 +19,7 @@ export enum Passion {
   templateUrl: './passions.component.html',
   styleUrls: ['./passions.component.scss'],
   animations: [
-    trigger('buttonEntry', [
+    trigger('elementEntry', [
       transition(':enter', [
         style({ opacity: 0 }),
         animate('1.5s', style({ opacity: 1 }))

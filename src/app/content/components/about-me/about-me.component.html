@@ -5,18 +5,20 @@
             <mat-radio-button value="german">German</mat-radio-button>
         </mat-radio-group>
         <br><br>
-        <div *ngIf="selectedLanguage==='german'; else germanLanguage" class="language">
-            Danke für das Besuchen meines Lebenslaufs.<br><br>
-            Mein Name ist Gereon Franken, ich bin 22 Jahre alt und momentan befinde ich mich in meinem dualen Masterprogramm mit der
-            Ausrichtung Big Data & Business Analytics. Ich bin leidenschaftlicher Entwickler und habe viel Spaß daran, neue Dinge zu lernen.
-            Im Team Herausforderungen anzugehen und kreative Lösungsmöglichkeiten zu finden halte ich für sehr spannend und ich bin immer motiviert,
-            zusammen Erfolge zu erzielen.
-        </div>
-        <ng-template class="language" #germanLanguage>
+        <div *ngIf="selectedLanguage==='english'; else germanLanguage" class="language">
             Thank you for visiting my CV.<br><br>
             My name is Gereon Franken, I am 22 years old and i am currently in my dual Master program for Big Data & Business Analytics.
             I am a passionate developer who highly values learning new things. To tackle challenges in a team and to find creative solutions
             for these is very exciting for me. Therefore, I am always motivated to reach achievments together.
+        </div>
+        <ng-template #germanLanguage >
+            <div class="language">
+                Danke für das Besuchen meines Lebenslaufs.<br><br>
+                Mein Name ist Gereon Franken, ich bin 22 Jahre alt und momentan befinde ich mich in meinem dualen Masterprogramm mit der
+                Ausrichtung Big Data & Business Analytics. Ich bin leidenschaftlicher Entwickler und habe viel Spaß daran, neue Dinge zu lernen.
+                Im Team Herausforderungen anzugehen und kreative Lösungsmöglichkeiten zu finden halte ich für sehr spannend und ich bin immer motiviert,
+                zusammen Erfolge zu erzielen. 
+            </div>
         </ng-template>
     </mat-card>
     <div style="width:35%"><img src="{{profilbildPath}}" class="profile-pics"></div>
