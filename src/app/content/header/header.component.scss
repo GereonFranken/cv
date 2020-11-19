@@ -4,15 +4,20 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .header-wrapper {
     display: flex;
     flex: 1;
-    min-height: 24vh;
-    flex-direction: column;
+    max-height: 10vh;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    color: #06bdce;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 60px;
+    margin-bottom: 0.8em;
 }
 
 .mat-tab-label {
@@ -29,6 +34,5 @@
 }
 
 .content {
-    margin-top: 6%;
     width: 94%;
 }

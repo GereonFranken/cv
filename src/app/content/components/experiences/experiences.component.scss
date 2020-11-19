@@ -12,18 +12,13 @@ $brand-primary: #1f9eba;
 $brand-success: #59ba1f;
 
 .details-box {
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
+    height: 50vh !important;
     margin-top: 34px;
     overflow-y: scroll;
     position: absolute;
-    right: 0px;
+    right: -webkit-calc(10% - 50px);
     text-align: left;
-    -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.175);
-    width: 46%;
+    width: 40%;
     z-index: 2;
     background-color: white;
 
