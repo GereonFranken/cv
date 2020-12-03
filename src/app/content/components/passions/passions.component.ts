@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import {
   trigger,
   style,
@@ -82,9 +83,7 @@ export class PassionsComponent implements OnInit {
     music: ['Instrument:Piano', 'Played for:10 years', 'Favorite Genre:Rap,EDM'],
   };
 
-  constructor() {
-    
-  }
+  constructor() { }
 
   calculateVector(angle: number) {
     // vx of vector v is calculated by |v| * cos(angle) + half of the icon width to center it

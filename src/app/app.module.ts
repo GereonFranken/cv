@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 import { AboutMeComponent } from './content/components/about-me/about-me.component';
 import { BackgroundComponent } from './content/components/background/background.component';
@@ -18,6 +20,7 @@ import { HeaderComponent } from './content/header/header.component';
 import { ExperiencesComponent } from './content/components/experiences/experiences.component';
 import { MatButtonModule } from '@angular/material/button';
 import { PassionsComponent } from './content/components/passions/passions.component';
+import { SkillsComponent } from './content/components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { PassionsComponent } from './content/components/passions/passions.compon
     BackgroundComponent,
     ExperiencesComponent,
     PassionsComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import { PassionsComponent } from './content/components/passions/passions.compon
     MatRadioModule,
     MatTableModule,
     MatTabsModule,
+    MatTooltipModule,
     FontAwesomeModule,
     FormsModule,
   ],
