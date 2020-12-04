@@ -53,6 +53,7 @@ import { SkillsComponent } from './content/components/skills/skills.component';
     MatIconModule,
     MatTableModule,
     MatTabsModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
