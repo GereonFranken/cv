@@ -8,15 +8,13 @@
     .skillGroup {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         height: 100%;
-        margin-left: 20px;
-        margin-bottom: 20px;
 
         .header {
             text-decoration: underline;
             color: #06bdce;
+            max-height: 4%;
         }
 
         .pie {
@@ -39,6 +37,7 @@
                 position: absolute;
                 top: -webkit-calc(50% - 35px);
                 left: -webkit-calc(50% - 35px);
+                text-align: center;
             }
         }
     

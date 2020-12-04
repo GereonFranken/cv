@@ -19,6 +19,10 @@ export class SkillsComponent implements OnInit {
           skillName: 'English',
           level: 4,
         },
+        {
+          skillName: 'Russian',
+          level: 1,
+        },
       ],
     },
     {
@@ -54,7 +58,11 @@ export class SkillsComponent implements OnInit {
           level: 4,
         },
         {
-          skillName: 'HTML5/CSS3',
+          skillName: 'Git',
+          level: 4,
+        },
+        {
+          skillName: 'HTML5/ CSS3',
           level: 4,
         },
         {
