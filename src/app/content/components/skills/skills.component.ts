@@ -81,26 +81,26 @@ export class SkillsComponent implements OnInit {
     },
   ]
 
-  certificates = [
-      {
-        certificate: 'Scrum Master 1',
-        link: 'https://www.scrum.org/certificates/578823',
-      },
-      {
-        certificate: 'Bayesian Methods for Machine Learning',
-        link: 'https://www.coursera.org/account/accomplishments/verify/BTDCZTXNT6KG',
-      },
-      {
-        certificate: 'AWS Machine Learning Foundations',
-        link: `https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/
-              7ad03ab8-f48a-4177-9f76-7e8612932ce3.pdf?utm_campaign=sch_600_auto_ndxxx_aws-ml-completed_
-              global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_auto_ndxxx_aws-ml-complet`,
-      },
-      {
-        certificate: 'Introduction to Tensorflow for AI, ML and DL',
-        link: 'https://www.coursera.org/account/accomplishments/verify/YYEQQJQ6NF3B',
-      },
-  ];
+  // certificates = [
+  //     {
+  //       certificate: 'Scrum Master 1',
+  //       link: 'https://www.scrum.org/certificates/578823',
+  //     },
+  //     {
+  //       certificate: 'Bayesian Methods for Machine Learning',
+  //       link: 'https://www.coursera.org/account/accomplishments/verify/BTDCZTXNT6KG',
+  //     },
+  //     {
+  //       certificate: 'AWS Machine Learning Foundations',
+  //       link: `https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/
+  //             7ad03ab8-f48a-4177-9f76-7e8612932ce3.pdf?utm_campaign=sch_600_auto_ndxxx_aws-ml-completed_
+  //             global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_auto_ndxxx_aws-ml-complet`,
+  //     },
+  //     {
+  //       certificate: 'Introduction to Tensorflow for AI, ML and DL',
+  //       link: 'https://www.coursera.org/account/accomplishments/verify/YYEQQJQ6NF3B',
+  //     },
+  // ];
 
   constructor() { }
 
