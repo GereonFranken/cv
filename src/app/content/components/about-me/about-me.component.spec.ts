@@ -13,6 +13,7 @@ describe('AboutMeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ AboutMeComponent ],
       imports: [ FormsModule, MatRadioModule, MatCardModule ],
+      providers: [],
     })
     .compileComponents();
   }));

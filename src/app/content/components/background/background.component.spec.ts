@@ -10,7 +10,8 @@ describe('BackgroundComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ BackgroundComponent ],
-      imports: [ MatTableModule ]
+      imports: [ MatTableModule ],
+      providers: [],
     })
     .compileComponents();
   }));
