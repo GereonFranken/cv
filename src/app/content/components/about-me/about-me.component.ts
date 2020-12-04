@@ -10,6 +10,7 @@ export class AboutMeComponent implements OnInit {
 
   selectedLanguage: 'english' | 'german' = 'english';
   profilbildPath = '..\\..\\..\\assets\\img\\profilbild1.jpg';
+  defaultChecked = true;
 
   constructor() { }
 

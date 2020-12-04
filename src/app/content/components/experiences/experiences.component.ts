@@ -13,7 +13,7 @@ export class FileNode {
 
 export class ExperiencesComponent implements OnInit {
   
-  selectedDetail: '' | 'Bachelor' | 'Master' = '';
+  selectedDetail: string = '';
 
   experiences: FileNode[] = [
     {
