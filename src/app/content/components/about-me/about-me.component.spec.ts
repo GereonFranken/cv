@@ -1,4 +1,7 @@
+import { MatCardModule } from '@angular/material/card';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AboutMeComponent } from './about-me.component';
 
@@ -8,7 +11,8 @@ describe('AboutMeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutMeComponent ]
+      declarations: [ AboutMeComponent ],
+      imports: [ FormsModule, MatRadioModule, MatCardModule ],
     })
     .compileComponents();
   }));

@@ -17,6 +17,7 @@ import { AboutMeComponent } from './content/components/about-me/about-me.compone
 import { BackgroundComponent } from './content/components/background/background.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './content/header/header.component';
+import { IconsModule } from './icons';
 import { ExperiencesComponent } from './content/components/experiences/experiences.component';
 import { MatButtonModule } from '@angular/material/button';
 import { PassionsComponent } from './content/components/passions/passions.component';
@@ -36,6 +37,7 @@ import { SkillsComponent } from './content/components/skills/skills.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    IconsModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,

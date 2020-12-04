@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatTableModule } from '@angular/material/table';
 
 import { BackgroundComponent } from './background.component';
 
@@ -8,7 +9,8 @@ describe('BackgroundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BackgroundComponent ]
+      declarations: [ BackgroundComponent ],
+      imports: [ MatTableModule ]
     })
     .compileComponents();
   }));
