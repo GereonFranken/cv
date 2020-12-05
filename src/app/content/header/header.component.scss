@@ -1,39 +1,19 @@
 .header {
     display: flex;
     flex: 1;
-    justify-content: space-around;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-}
-
-.header-wrapper {
-    display: flex;
-    flex: 1;
-    max-height: 10vh;
-    align-items: center;
-    justify-content: center;
-    color: #06bdce;
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 60px;
-    margin-bottom: 0.8em;
 }
 
 .mat-tab-label {
     color: #06bdce;
     font-size: x-large;
     min-width: 250px !important;
-}
-
-.profile-pic {
-    border-radius: 48%;
     margin-top: 4vh;
-    height: 26vh;
-    position: absolute;
-    box-shadow: 4px 4px #D0D0D0;
 }
 
-.content {
-    width: 94%;
+.mat-tab-body-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }

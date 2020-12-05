@@ -12,15 +12,16 @@ $brand-primary: #1f9eba;
 $brand-success: #59ba1f;
 
 .details-box {
-    height: 50vh !important;
-    margin-top: 34px;
-    overflow-y: scroll;
+    height: 40vh;
+    margin-top: 40px;
+    overflow-y: auto;
     position: absolute;
     right: -webkit-calc(10% - 50px);
     text-align: left;
     width: 40%;
     z-index: 2;
     background-color: white;
+    border-radius: 10px;
 
     
     .details {
@@ -83,8 +84,8 @@ $brand-success: #59ba1f;
             align-items: center;
             justify-content: center;
             color: black;
-            width: 64px;
-            height: 64px;
+            width: 9vh;
+            height: 9vh;
             line-height: 12px;
             font-size: 13px;
             text-align: center;
@@ -92,7 +93,7 @@ $brand-success: #59ba1f;
             top: -webkit-calc(13.3vh - 32px);
             left: 50%;
             margin-left: -32px;
-            
+            cursor: pointer;            
             background-color: #06bdce;
             z-index: 2;
             border: 3px solid #ffffff;
@@ -118,13 +119,14 @@ $brand-success: #59ba1f;
             text-align: right;
             width: 46%;
             float: left;
-            right: 16px;
+            right: 4.5vh;
             top: -webkit-calc(13.3vh - 50px);
             background: #ffffff;
-            border-radius: 2px;
             padding: 16px;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            border-radius: 10px;
+            cursor: pointer;
             &:before {
                 position: absolute;
                 top: 26px;

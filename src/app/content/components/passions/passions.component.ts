@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {
   trigger,
@@ -45,7 +45,7 @@ export class PassionsComponent implements OnInit {
   // (numSides -2) * 180 is the formula for the sum of angles in a polygon
   anglesSum = (this.numSides - 2) * 180;
   angle = 180 - this.anglesSum / this.numSides;
-  polygonDistance = 190 //px
+  polygonDistance = 0;
   isIconClicked: 'default' | 'iconClicked' | 'otherIconClicked' = 'default';
 
   icons = [
@@ -83,7 +83,16 @@ export class PassionsComponent implements OnInit {
     music: ['Instrument:Piano', 'Played for:10 years', 'Favorite Genre:Rap,EDM'],
   };
 
-  constructor() { }
+  constructor() {
+    this.getScreenWidth();
+  }
+
+  ngOnInit(): void { }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenWidth(event?) {
+        this.polygonDistance = 0.2 * window.innerWidth /2
+  }
 
   calculateVector(angle: number) {
     // vx of vector v is calculated by |v| * cos(angle) + half of the icon width to center it
@@ -91,8 +100,6 @@ export class PassionsComponent implements OnInit {
     return {x: (this.polygonDistance * Math.sin(angle*Math.PI/180) - 21),
             y: (-(this.polygonDistance * Math.cos(angle*Math.PI/180) + 21))};
   }
-
-  ngOnInit(): void { }
 
   getPassion(passion: Passion) {
     return Object.keys(Passion).filter((x) => Passion[x] == passion)[0];
