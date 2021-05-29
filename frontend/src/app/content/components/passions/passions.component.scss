@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    min-height: 400px;
+    max-height: 450px;
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        margin: 150px;
+        height: 125px;
+        background-color: white;
+        border-style: solid;
+        width: 155px;
+        background-size: 155px 125px;
+        border-radius: 20px;
+        font-size: medium;
+    }
+
+    .clickedCenter {
+        display: flex;
+        justify-content: center;
+        
+        background-color: white;
+        border-style: solid;
+        width: 50vw;
+        max-width: 200px;
+        background-size: 155px 125px;
+        border-radius: 10px;
+        font-size: medium;
+    }
+
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E14B4B;
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+.polygonIcon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #06bdce;
+    cursor: pointer;
+}
