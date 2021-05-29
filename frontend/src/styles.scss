@@ -1,0 +1,49 @@
+@import "~font-awesome/css/font-awesome.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content {
+    height: 70%;
+}
+
+.mat-tab-body-content {
+    overflow-y: hidden !important;
+}
+
+.mat-tab-body.mat-tab-body-active {
+    overflow-y: hidden !important;
+}
+
+* {
+    font-family: sans-serif !important;
+}
+
+mat-ink-bar {
+    background-color: #06bdce !important;
+}
+
+.mat-tab-label-container {
+    padding-bottom: 3% !important;
+}
+
+mat-tab-group {
+    padding-bottom: 1% !important;
+}
+
+.mat-tab-label-content {
+    font-weight: bolder !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #06bdce;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #06bdce;
+}
+
+mat-card {
+    border-radius: 10px !important;
+}
+
+// light blue: #06bdce
