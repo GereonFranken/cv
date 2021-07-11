@@ -1,6 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
+import { includes } from "lodash";
+
+const BASE_URL = "http://127.0.0.1:5002";
 @Component({
   selector: "app-chess",
   templateUrl: "./chess.component.html",
@@ -12,6 +15,7 @@ export class ChessComponent implements OnInit {
   board: SafeHtml;
   figureClicked: boolean = false;
   moveInProgress: string = "";
+  currentPossibleMoves: [string, string][] = [];
 
   constructor(
     private httpClient: HttpClient,
@@ -19,30 +23,34 @@ export class ChessComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.httpClient.get("http://127.0.0.1:5002/next-move").subscribe((data) => {
+    this.httpClient.get(BASE_URL + "/new-game").subscribe((data) => {
+      this.currentPossibleMoves = data["moves"];
       this.board = this.sanitizer.bypassSecurityTrustHtml(data["svg_board"]);
-      setTimeout(() => this.applyEventHandlers, 500);
+      setTimeout(() => this.applyEventHandlers(), 300);
     });
   }
 
-  onFigureDrag(event: MouseEvent, type: "figure" | "square") {
-    console.log({ event, type });
-    if (type === "figure") {
-      if (this.figureClicked) {
-        // remove highlighting of possible moves
-        this.figureClicked = false;
-      } else {
-        // highlight legel possible moves
-        this.figureClicked = true;
-        this.moveInProgress.concat(event.target["classList"][2]);
-      }
+  onClick(event: MouseEvent, type: "figure" | "square") {
+    if (
+      this.figureClicked &&
+      includes(
+        this.currentPossibleMoves.map((move) => move.join("")),
+        this.moveInProgress.concat(event.target["classList"][2])
+      )
+    ) {
+      const move = this.moveInProgress.concat(event.target["classList"][2]);
+      this.playMove(move);
+      this.figureClicked = false;
     } else {
-      if (this.figureClicked) {
-        const newMove = this.moveInProgress.concat(
-          event.target["classList"][2]
-        );
-        // POST api call to push new move
-        this.figureClicked = false;
+      if (type === 'figure') {
+        this.currentPossibleMoves
+          .filter((move) => move[0] === this.moveInProgress)
+          .forEach((move) => {
+            document.getElementById(move[1]).style.removeProperty("fill");
+          });
+        this.moveInProgress = event.target["previousSibling"]["classList"][2];
+        this.showPossibleMoves();
+        this.figureClicked = true;
       }
     }
   }
@@ -54,14 +62,41 @@ export class ChessComponent implements OnInit {
     for (let i = 0; i < svgChildren.length; i++) {
       if (svgChildren[i].id === "figure") {
         svgChildren[i].addEventListener("click", (event: MouseEvent) =>
-          this.onFigureDrag(event, "figure")
+          this.onClick(event, "figure")
         );
       }
       if (svgChildren[i].classList[0] === "square") {
+        svgChildren[i].id = svgChildren[i].classList[2];
         svgChildren[i].addEventListener("click", (event: MouseEvent) =>
-          this.onFigureDrag(event, "square")
+          this.onClick(event, "square")
         );
       }
     }
+  }
+
+  playMove(move: string) {
+    this.httpClient
+      .post(BASE_URL + "/play-move", { move })
+      .subscribe((data) => {
+        if (data["winner"] !== null) {
+          if (data["winner"]) {
+            console.log("CONGRATS YOU WON");
+          } else {
+            console.log("Darn you lost ...");
+          }
+        } else {
+          this.currentPossibleMoves = data["moves"];
+          this.board = this.sanitizer.bypassSecurityTrustHtml(data["svg_board"]);
+          setTimeout(() => this.applyEventHandlers(), 300);
+        }
+      });
+  }
+
+  showPossibleMoves() {
+    this.currentPossibleMoves
+      .filter((move) => move[0] === this.moveInProgress)
+      .forEach((move) => {
+        document.getElementById(move[1]).style.fill = "green";
+      });
   }
 }
