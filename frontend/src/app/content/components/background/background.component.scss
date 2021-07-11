@@ -1,0 +1,36 @@
+.table-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+table {
+    margin-top: 1.2em;
+    width: 60%;
+    border-radius: 10px;
+
+    :last-child td:first-child{
+        border-radius: 0px 0px 0px 10px;
+    }
+
+    :last-child td:last-child{
+        border-radius: 0px 0px 10px 0px;
+    }
+
+}
+
+.heading-column {
+    color: #06bdce;
+    font-size: larger;
+    width: 40%;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.content-column {
+    width: 70%;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.cell {
+    line-height: 1.8em;
+}
