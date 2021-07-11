@@ -1,0 +1,31 @@
+<div class="wrapper" ng-app="center">
+    <div mat-card [ngClass]="(passion==='') ? 'center' : 'clickedCenter'" style="-webkit-transition: 1s ease-in-out">
+        <div *ngIf="passion===''; else selectedPassion" @elementEntry>
+            Please click on a passion of your choice
+        </div>
+        <ng-template #selectedPassion>
+            <div *ngIf="getPassion(passion) as passionKey" style="margin:10px 10px; width:100%" @elementEntry>
+                <div *ngFor="let fact of contents[passionKey]">
+                    <div style="font-weight: bold;">{{fact.split(":")[0]}}</div>
+                    <div>{{fact.split(":")[1]}}</div>
+                    <br>
+                </div>
+            </div>
+            <button mat-raised-button class="close" (click)="passion = myEnum.none" @elementEntry>Close</button>
+        </ng-template>
+    </div>
+</div>
+<div>
+<div *ngFor="let icon of icons;let i = index;">
+    <div *ngIf="calculateVector(angle*i) as newAngle">
+        <fa-icon
+            [id]="'icon' + i"
+            class="polygonIcon"
+            [ngStyle]="{transform: transformIcon(newAngle, icon.passion, i), '-webkit-transition': '1s ease-in-out'}"
+            [icon]="['fas', icon.iconName]" 
+            size="4x" 
+            (click)="handleIconClick(icon.passion)"
+            matTooltip="{{icon.passion}}">
+        </fa-icon>
+    </div>
+</div>
