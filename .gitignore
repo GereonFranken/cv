@@ -44,14 +44,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-/frontend/node_modules
-/templates
-/static
-/__pycache__
-.gitignore
-/frontend/docs
-/package_env
-/chess_engine
-build-dev.py
-state*
