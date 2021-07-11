@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mat-tab-label {
+    color: #06bdce;
+    font-size: x-large;
+    min-width: 250px !important;
+    margin-top: 4vh;
+}
+
+.mat-tab-body-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}

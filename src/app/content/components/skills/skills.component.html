@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="skillGroup" *ngFor="let skillGroup of skills">
+        <h2 class="header">{{skillGroup.chapter}}</h2>
+        <div *ngFor="let skill of skillGroup.content">
+            <div 
+                class="pie" 
+                [ngStyle]="{'background-image': getSkillFilling(skill.level)}">
+                <div 
+                    *ngFor="let item of [].constructor(5); let i = index"
+                    class="line"
+                    [ngStyle]="{transform: getLineRotation(i)}">
+                </div>
+                <div class="smallerPie">{{skill.skillName}}</div>
+            </div>
+        <div>
+    </div>
+</div>
