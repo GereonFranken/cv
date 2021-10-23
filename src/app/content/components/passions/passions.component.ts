@@ -91,7 +91,8 @@ export class PassionsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenWidth(event?) {
-        this.polygonDistance = 0.2 * window.innerWidth /2
+    if (window.innerWidth < 768) this.polygonDistance = 0.55 * window.innerWidth /2
+    else this.polygonDistance = 0.22 * window.innerWidth /2
   }
 
   calculateVector(angle: number) {
@@ -113,7 +114,9 @@ export class PassionsComponent implements OnInit {
     if (this.passion === '') {
       return 'translateX('+ newAngle.x +'px) translateY('+ newAngle.y +'px)';
     } else if (this.passion === passion) {
-      return 'translateX('+ -this.polygonDistance +'px) translateY('+ -this.polygonDistance +'px)';
+      const xTranslation = - document.getElementById('icon' + iterationCtr).clientWidth - this.polygonDistance;
+      // TODO: yTranslation is dependend on viewwidth which is why inconsistent views occur. Find a more dynamic solution
+      return 'translateX('+ xTranslation +'px) translateY('+ -this.polygonDistance +'px)';
     } else {
       const xTranslation = (70 - document.getElementById('icon' + iterationCtr).clientWidth) / 2 + this.polygonDistance;
       return 'translateX('+ xTranslation + 'px) translateY('+

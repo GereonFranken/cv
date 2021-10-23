@@ -25,7 +25,7 @@
     .clickedCenter {
         display: flex;
         justify-content: center;
-        
+
         background-color: white;
         border-style: solid;
         width: 20vw;
@@ -38,7 +38,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #E14B4B;
+        background-color: #e14b4b;
         height: 30px;
         width: 100px;
         position: absolute;
@@ -52,4 +52,16 @@
     top: 50%;
     color: #06bdce;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        .center {
+            width: 30vw;
+        }
+
+        .clickedCenter {
+            width: 40vw;
+        }
+    }
 }

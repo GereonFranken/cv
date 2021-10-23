@@ -21,8 +21,39 @@
         }
     }
 
-    .profile-pic {
-        border-radius: 48%;
-        max-width: 22vw;
+    .img-wrapper {
+        width: 35%;
+
+        .profile-pic {
+            border-radius: 48%;
+            max-width: 28vw;
+            max-height: 400px;
+        }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+
+        mat-card {
+            width: 80%;
+        }
+    
+        .img-wrapper {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            .profile-pic {
+                padding-bottom: 16px;
+                border-radius: 48%;
+                max-width: 100%;
+                min-width: 150px;
+                z-index: 2;
+            }
+        }
+    }
+  }

@@ -1,9 +1,20 @@
-<div class="header">
-    <mat-tab-group mat-align-tabs="center" style="padding-bottom:5%;flex:1">
-      <mat-tab label="About Me" style="flex:1"><app-about-me></app-about-me></mat-tab>
-      <mat-tab label="Background"><app-background class="background-component"></app-background></mat-tab>
-      <mat-tab label="Skills"><app-skills></app-skills></mat-tab>
-      <mat-tab label="Experiences"><app-experiences></app-experiences></mat-tab>
-      <mat-tab label="Passions"><app-passions></app-passions></mat-tab>
-    </mat-tab-group>
+<div *ngIf="fullScreen;else mobileScreen" class="header">
+  <mat-tab-group mat-align-tabs="center" class="mat-tab-group" [(selectedIndex)]="selectedTab">
+    <mat-tab label="About Me" style="flex:1"><app-about-me></app-about-me></mat-tab>
+    <mat-tab label="Background"><app-background class="background-component"></app-background></mat-tab>
+    <mat-tab label="Skills"><app-skills></app-skills></mat-tab>
+    <mat-tab label="Experiences"><app-experiences></app-experiences></mat-tab>
+    <mat-tab label="Passions"><app-passions></app-passions></mat-tab>
+  </mat-tab-group>
 </div>
+<ng-template #mobileScreen class="header" (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
+  <div class="generic-side-list left-side-list"><span *ngFor="let element of leftUnselectedList">{{element}}</span></div>
+  <mat-tab-group mat-align-tabs="center" class="mat-tab-group" [(selectedIndex)]="selectedTab">
+    <mat-tab *ngIf="selectedTab === 0" label="About Me" style="flex:1"><app-about-me></app-about-me></mat-tab>
+    <mat-tab *ngIf="selectedTab === 1" label="Background"><app-background class="background-component"></app-background></mat-tab>
+    <mat-tab *ngIf="selectedTab === 2" label="Skills"><app-skills></app-skills></mat-tab>
+    <mat-tab *ngIf="selectedTab === 3" label="Experiences"><app-experiences></app-experiences></mat-tab>
+    <mat-tab *ngIf="selectedTab === 4" label="Passions"><app-passions></app-passions></mat-tab>
+  </mat-tab-group>
+  <div class="generic-side-list right-side-list"><span *ngFor="let element of rightUnselectedList">{{element}}</span></div>
+<ng-template>

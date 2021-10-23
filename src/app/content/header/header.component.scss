@@ -3,6 +3,33 @@
     flex: 1;
     flex-direction: column;
     width: 100%;
+
+    .generic-side-list {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 80px;
+        position: absolute;
+        top: 12px;
+        padding: 4px 4px;
+        background-color: white;
+        border-radius: 4px;
+        z-index: 2;
+    }
+
+    .left-side-list {
+        left: 12px;
+    }
+
+    .right-side-list {
+        right: 12px;
+    }
+
+    .mat-tab-group {
+        display: flex;
+        padding-bottom:5%;
+        flex:1;
+    }
 }
 
 .mat-tab-label {
@@ -16,4 +43,20 @@
     flex: 1;
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+    .mat-tab-label {
+        color: #06bdce;
+        font-size: large;
+        min-width: 100px !important;
+        max-width: 150px !important;
+        margin-top: 4vh;
+    }
 }
