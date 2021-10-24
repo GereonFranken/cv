@@ -46,7 +46,6 @@ export class HeaderComponent implements OnInit {
         Math.abs(direction[0]) > 30 && // Long enough
         Math.abs(direction[0]) > Math.abs(direction[1] * 3) // Horizontal enough
       ) {
-        this.validateUnselectedTabs()
         const swipe = direction[0] < 0 ? "next" : "pervious";
         if (swipe === "next") {
           const isFirst = this.selectedTab === 0;
@@ -58,6 +57,7 @@ export class HeaderComponent implements OnInit {
             this.selectedTab = this.selectedTab - 1;
           }
         }
+        this.validateUnselectedTabs()
       }
     }
   }
@@ -65,6 +65,7 @@ export class HeaderComponent implements OnInit {
   validateUnselectedTabs() {
     this.leftUnselectedList = [];
     this.rightUnselectedList = [];
+    console.log(this.selectedTab)
     this.allTabs.forEach((tab, i) => {
       if (i < this.selectedTab) this.leftUnselectedList.push(tab);
       else if (i > this.selectedTab) this.rightUnselectedList.push(tab);

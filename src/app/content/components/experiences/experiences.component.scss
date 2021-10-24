@@ -161,6 +161,7 @@ $brand-success: #59ba1f;
 
 @media only screen and (max-width: 768px) {
     .timeline {
+        height: 50vh;
         &:before {
             left: 46%;
         }
@@ -175,11 +176,12 @@ $brand-success: #59ba1f;
             }
             .timeline-badge {
                 top: -webkit-calc(13.3vh - 48px);
-                left: -webkit-calc(50% - 36px);
+                left: -webkit-calc(50% - 27px);
             }
         }
     }
     .details-box {
         right: -webkit-calc(10% - 36px);
+        height: 50vh;
     }
 }
