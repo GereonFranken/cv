@@ -14,7 +14,7 @@
   <ng-container *ngIf="selectedDetail == 'Master'">
     <div class="details" *ngFor="let project of experiences[1].children[0].children">
       <div class="details-heading">{{project.duration}}<br>{{project.name}}</div>
-      <div class="details-content">{{project.children[0].name}}</div>
+      <div class="details-content"  style="white-space: pre-line">{{project.children[0].name}}</div>
     </div>
   </ng-container>
 </div>
