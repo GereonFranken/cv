@@ -34,3 +34,12 @@ table {
 .cell {
     line-height: 1.8em;
 }
+
+@media screen and (max-width: 768px) {
+    .table-wrapper {
+        margin-top: 16px;
+    }
+    table {
+        width: 80%;
+    }
+}

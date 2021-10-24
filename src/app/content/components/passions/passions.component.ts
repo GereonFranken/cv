@@ -91,7 +91,7 @@ export class PassionsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenWidth(event?) {
-    if (window.innerWidth < 768) this.polygonDistance = 0.55 * window.innerWidth /2
+    if (window.innerWidth < 768) this.polygonDistance = 0.56 * window.innerWidth /2
     else this.polygonDistance = 0.22 * window.innerWidth /2
   }
 
