@@ -6,6 +6,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { onMobile } from 'src/environments/deviceChecker';
 
 export enum Passion {
   none = '',
@@ -47,6 +48,7 @@ export class PassionsComponent implements OnInit {
   angle = 180 - this.anglesSum / this.numSides;
   polygonDistance = 0;
   isIconClicked: 'default' | 'iconClicked' | 'otherIconClicked' = 'default';
+  onMobile = onMobile;
 
   icons = [
     {

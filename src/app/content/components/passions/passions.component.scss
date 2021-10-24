@@ -54,14 +54,12 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .wrapper {
-        .center {
-            width: 30vw;
-        }
+.wrapper-mobile {
+    .center {
+        width: 30vw;
+    }
 
-        .clickedCenter {
-            width: 40vw;
-        }
+    .clickedCenter {
+        width: 40vw;
     }
 }

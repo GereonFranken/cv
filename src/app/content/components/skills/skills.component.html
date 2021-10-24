@@ -1,6 +1,6 @@
-<div class="wrapper">
+<div class="wrapper" [ngClass]="{'wrapper-mobile': onMobile}">
     <div class="skillGroup" *ngFor="let skillGroup of skills">
-        <h2 class="header">{{skillGroup.chapter}}</h2>
+        <h2 class="header" [ngClass]="{'mobile': onMobile}">{{skillGroup.chapter}}</h2>
         <div *ngFor="let skill of skillGroup.content">
             <div 
                 class="pie" 

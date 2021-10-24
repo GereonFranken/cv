@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{'container-mobile': onMobile}">
     <div class="img-wrapper"><img src="{{profilbildPath}}" class="profile-pic"></div>
     <mat-card class="card">
         <mat-radio-group aria-label="Select a language" [(ngModel)]="selectedLanguage" class="radio-group">

@@ -1,5 +1,6 @@
 import { MatTableModule } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
+import { onMobile } from 'src/environments/deviceChecker';
 
 @Component({
   selector: 'app-background',
@@ -23,6 +24,7 @@ export class BackgroundComponent implements OnInit {
   ];
 
   displayedColumns: string[] = ['heading', 'content'];
+  onMobile = onMobile;
 
   constructor() { }
 

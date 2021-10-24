@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { onMobile } from 'src/environments/deviceChecker';
 
 @Component({
   selector: 'app-skills',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
+  onMobile = onMobile;
   skills = [
     {
       chapter: 'Languages',

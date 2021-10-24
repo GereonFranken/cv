@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { onMobile } from "src/environments/deviceChecker";
 
 export class FileNode {
   children?: FileNode[];
@@ -124,6 +125,7 @@ export class ExperiencesComponent implements OnInit {
 
   emptyCircleIconPath: string = "src\\assets\\icons\\circle-outline.svg";
   filledCircleIconPath: string = "src\\assets\\icons\\circle-slice.svg";
+  onMobile = onMobile;
 
   constructor() {}
 

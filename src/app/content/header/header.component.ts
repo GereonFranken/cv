@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from "@angular/core";
+import { onMobile } from "src/environments/deviceChecker";
 
 @Component({
   selector: "app-header",
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateUnselectedTabs();
+    console.log(onMobile)
   }
 
   @HostListener('window:resize', ['$event'])

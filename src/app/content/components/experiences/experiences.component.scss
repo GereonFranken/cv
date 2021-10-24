@@ -159,29 +159,29 @@ $brand-success: #59ba1f;
   }
 }
 
-@media only screen and (max-width: 768px) {
-    .timeline {
-        height: 50vh;
-        &:before {
-            left: 46%;
+.timeline-mobile {
+    height: 50vh;
+    &:before {
+        left: 46%;
+    }
+    .arrow-up {
+        left: -webkit-calc(46% - 18px);
+    }
+    .timeline-item {
+        .timeline-panel {
+            width: 32%;
+            right: 5%;
+            top: -webkit-calc(13.3vh - 110px);
         }
-        .arrow-up {
-            left: -webkit-calc(46% - 18px);
-        }
-        .timeline-item {
-            .timeline-panel {
-                width: 32%;
-                right: 3%;
-                top: -webkit-calc(13.3vh - 80px);
-            }
-            .timeline-badge {
-                top: -webkit-calc(13.3vh - 48px);
-                left: -webkit-calc(50% - 27px);
-            }
+        .timeline-badge {
+            height: 8vh;
+            width: 8vh;
+            top: -webkit-calc(13.3vh - 48px);
+            left: -webkit-calc(50% - 23px);
         }
     }
-    .details-box {
-        right: -webkit-calc(10% - 36px);
-        height: 50vh;
-    }
+}
+.details-box-mobile {
+    right: -webkit-calc(10% - 30px);
+    height: 50vh;
 }

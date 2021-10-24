@@ -35,11 +35,10 @@ table {
     line-height: 1.8em;
 }
 
-@media screen and (max-width: 768px) {
-    .table-wrapper {
-        margin-top: 16px;
-    }
-    table {
-        width: 80%;
-    }
+// @media screen and (max-width: 768px) {
+.table-wrapper-mobile {
+    margin-top: 16px;
+}
+table.mobile {
+    width: 80%;
 }

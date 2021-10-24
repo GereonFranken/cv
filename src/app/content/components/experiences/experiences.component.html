@@ -1,4 +1,4 @@
-<div class="details-box">
+<div class="details-box" [ngClass]="{'details-box-mobile': onMobile}">
   <div class="details" *ngIf="selectedDetail == ''">
     <div class="details-content">Please click on a chapter to the left to see details here ...
     </div>
@@ -18,7 +18,7 @@
     </div>
   </ng-container>
 </div>
-<ul class="timeline">
+<ul class="timeline" [ngClass]="{'timeline-mobile': onMobile}">
   <div class="arrow-up"></div>
   <li class="timeline-item"
     [ngClass]="{'highlighted': selectedDetail == 'Master', 'equallighted': selectedDetail == ''}">

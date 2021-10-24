@@ -1,4 +1,4 @@
-<div class="wrapper" ng-app="center">
+<div class="wrapper" ng-app="center" [ngClass]="{'wrapper-mobile': onMobile}">
     <div mat-card [ngClass]="(passion==='') ? 'center' : 'clickedCenter'" style="-webkit-transition: 1s ease-in-out">
         <div *ngIf="passion===''; else selectedPassion" @elementEntry>
             Please click on a passion of your choice
