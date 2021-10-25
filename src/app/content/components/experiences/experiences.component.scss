@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .tree ul,
 .tree li {
   margin-top: 0.8em;
@@ -159,7 +161,7 @@ $brand-success: #59ba1f;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $mobileScreenWidth) {
     .timeline {
         height: 50vh;
         &:before {

@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .header {
     display: flex;
     flex: 1;
@@ -45,7 +47,7 @@
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobileScreenWidth) {
     .header {
         display: flex;
         flex-direction: row;

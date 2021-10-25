@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .table-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +37,7 @@ table {
     line-height: 1.8em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobileScreenWidth) {
     .table-wrapper {
         margin-top: 16px;
     }

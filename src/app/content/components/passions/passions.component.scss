@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -54,7 +56,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobileScreenWidth) {
     .wrapper {
         .center {
             width: 30vw;
