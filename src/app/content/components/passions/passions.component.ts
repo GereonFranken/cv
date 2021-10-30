@@ -104,8 +104,8 @@ export class PassionsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenWidth(event?) {
-    if (this.onMobile) this.polygonDistance = (0.66 * window.innerWidth) / 2;
-    else this.polygonDistance = (0.27 * window.innerWidth) / 2;
+    if (this.onMobile) this.polygonDistance = (0.3 * window.innerWidth);
+    else this.polygonDistance = (0.21 * window.innerWidth) / 2;
   }
 
   calculateVector(angle: number) {
