@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from "@angular/core";
+import { Select, Store } from "@ngxs/store";
+import { SetOnMobile } from "src/app/state/cv.actions";
 
 @Component({
   selector: "app-header",
@@ -12,18 +14,21 @@ export class HeaderComponent implements OnInit {
   selectedTab = 0;
   swipeCoord: [number, number];
   swipeTime: number;
-  fullScreen = true;
+  onMobile = false;
   leftUnselectedList = [];
   rightUnselectedList = [];
-  constructor() {}
+  constructor(private cvStore: Store) {}
 
   ngOnInit(): void {
+    this.getScreenWidth();
     this.validateUnselectedTabs();
+    this.cvStore.select(state => state.cvState.onMobile).subscribe(onMobile => this.onMobile = onMobile);
   }
 
   @HostListener('window:resize', ['$event'])
   getScreenWidth(event?) {
-    if (window.innerWidth < 768) this.fullScreen = false;
+    if (window.innerHeight > window.innerWidth && this.onMobile === false) this.cvStore.dispatch(new SetOnMobile(true));
+    else if (window.innerHeight < window.innerWidth && this.onMobile === true) this.cvStore.dispatch(new SetOnMobile(false));
   }
 
   swipe(e: TouchEvent, when: string): void {
@@ -65,7 +70,6 @@ export class HeaderComponent implements OnInit {
   validateUnselectedTabs() {
     this.leftUnselectedList = [];
     this.rightUnselectedList = [];
-    console.log(this.selectedTab)
     this.allTabs.forEach((tab, i) => {
       if (i < this.selectedTab) this.leftUnselectedList.push(tab);
       else if (i > this.selectedTab) this.rightUnselectedList.push(tab);

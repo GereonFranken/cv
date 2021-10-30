@@ -1,5 +1,5 @@
-import { MatTableModule } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'app-background',
@@ -23,10 +23,12 @@ export class BackgroundComponent implements OnInit {
   ];
 
   displayedColumns: string[] = ['heading', 'content'];
+  onMobile = false;
 
-  constructor() { }
+  constructor(private cvStore: Store) { }
 
   ngOnInit(): void {
+    this.cvStore.select(state => state.cvState.onMobile).subscribe(onMobile => this.onMobile = onMobile);
   }
 
 }

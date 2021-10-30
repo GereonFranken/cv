@@ -1,8 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -11,10 +10,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
 
 
 import { AboutMeComponent } from './content/components/about-me/about-me.component';
 import { BackgroundComponent } from './content/components/background/background.component';
+import { CVState } from './state/cv.state';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './content/header/header.component';
 import { IconsModule } from './icons';
@@ -47,6 +49,9 @@ import { SkillsComponent } from './content/components/skills/skills.component';
     MatTooltipModule,
     FontAwesomeModule,
     FormsModule,
+    NgxsModule.forRoot([CVState], {
+      developmentMode: !environment.production
+    }),
   ],
   exports: [
     MatButtonModule,

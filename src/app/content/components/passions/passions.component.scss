@@ -6,7 +6,6 @@
     width: 100%;
     padding-top: 20px;
     min-height: 400px;
-    max-height: 450px;
 
     .center {
         display: flex;
@@ -56,14 +55,13 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: $mobileScreenWidth) {
-    .wrapper {
-        .center {
-            width: 30vw;
-        }
 
-        .clickedCenter {
-            width: 40vw;
-        }
+.wrapper-mobile {
+    .center {
+        width: 30vw;
+    }
+
+    .clickedCenter {
+        width: 40vw;
     }
 }

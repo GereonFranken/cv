@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngxs/store";
 
 export class FileNode {
   children?: FileNode[];
@@ -124,8 +125,11 @@ export class ExperiencesComponent implements OnInit {
 
   emptyCircleIconPath: string = "src\\assets\\icons\\circle-outline.svg";
   filledCircleIconPath: string = "src\\assets\\icons\\circle-slice.svg";
+  onMobile = false;
 
-  constructor() {}
+  constructor(private cvStore: Store) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cvStore.select(state => state.cvState.onMobile).subscribe(onMobile => this.onMobile = onMobile);
+  }
 }
