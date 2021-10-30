@@ -13,6 +13,10 @@ $gray-light: #777;
 $brand-primary: #1f9eba;
 $brand-success: #59ba1f;
 
+.mobile-padding {
+  margin-top: 40px;
+}
+
 .details-box {
   height: 40vh;
   margin-top: 40px;
@@ -94,8 +98,8 @@ $brand-success: #59ba1f;
       align-items: center;
       justify-content: center;
       color: black;
-      width: 9vh;
-      height: 9vh;
+      width: 86px;
+      height: 86px;
       line-height: 12px;
       font-size: 13px;
       text-align: center;
@@ -126,10 +130,10 @@ $brand-success: #59ba1f;
     }
 
     .timeline-badge-mobile {
-      height: 8vh;
-      width: 8vh;
+      width: 68px;
+      height: 68px;
       top: -webkit-calc(13.3vh - 48px);
-      left: -webkit-calc(46% - 14px);
+      left: -webkit-calc(46% - 6px);
     }
 
     .timeline-panel {
