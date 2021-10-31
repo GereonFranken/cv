@@ -8,5 +8,5 @@ If you are planning to use elements of this repository, be aware that I overkill
 
 Otherwise, feel free to use whatever you like :) 
 
-<img src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif" width="300" height="300" />
-<img src="https://media.giphy.com/media/13hxeOYjoTWtK8/giphy.gif" width="300" height="300" />
+<img src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif" width="250" height="250" />
+<img src="https://media.giphy.com/media/13hxeOYjoTWtK8/giphy.gif" width="250" height="250" />
