@@ -1,27 +1,9 @@
 # Cv
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+Welcome to the Repository of my CV, thanks for visiting.
 
-## Development server
+This CV is written in Angular and hosted with [Github Pages](https://gereonfranken.github.io/cv/). Please feel free to see the CV in action!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you are planning to use elements of this repository, be aware that I overkilled the scope of a CV website. I used [Angular](https://angular.io/) which is normally used for huge applications and also introduced state management with [NGXS](https://www.ngxs.io/) for currently one simple boolean flag. I did this because I wanted to try out several things and also to build a scalable application from the start. This does not mean that its the best solution by any means though. Depending on your use case, maybe you are better off using a different Framework or even simple HTML, CSS and Javascript for the matter. This would make your application way more lightweight as well.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Otherwise, feel free to use whatever you like :) 
