@@ -98,8 +98,10 @@ export class PassionsComponent implements OnInit {
   constructor(private cvStore: Store) {}
 
   ngOnInit(): void {
-    this.getScreenWidth();
-    this.cvStore.select((state) => state.cvState.onMobile).subscribe((onMobile) => (this.onMobile = onMobile));
+    this.cvStore.select((state) => state.cvState.onMobile).subscribe((onMobile) => {
+      this.onMobile = onMobile;
+      this.getScreenWidth();
+    });
   }
 
   @HostListener('window:resize', ['$event'])
