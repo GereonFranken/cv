@@ -1,4 +1,4 @@
-# Cv
+# CV
 
 Welcome to the Repository of my CV, thanks for visiting.
 
