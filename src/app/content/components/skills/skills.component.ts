@@ -26,7 +26,7 @@ export class SkillsComponent implements OnInit {
       ],
     },
     {
-      chapter: 'Programming Lanugages',
+      chapter: 'Programming Languages',
       content: [
         {
           skillName: 'Python',

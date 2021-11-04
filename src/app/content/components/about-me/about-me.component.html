@@ -1,5 +1,5 @@
 <div class="container" [ngClass]="{'container-mobile': onMobile}">
-    <div class="img-wrapper"><img src="{{profilbildPath}}" class="profile-pic"></div>
+    <div class="img-wrapper"><img src="{{profilePicPaths[picPointer]}}" class="profile-pic" [@.disabled]="disableAnimations" [@fade]="fadeInImg"></div>
     <mat-card class="card">
         <mat-radio-group aria-label="Select a language" [(ngModel)]="selectedLanguage" class="radio-group">
             <mat-radio-button value="english" [checked]=defaultChecked>English</mat-radio-button>
@@ -8,9 +8,9 @@
         <br><br>
         <div *ngIf="selectedLanguage==='english'; else germanLanguage" class="language">
             Thank you for visiting my CV.<br><br>
-            My name is Gereon Franken, I am 23 years old and i am currently in my dual Master program for Big Data & Business Analytics.
+            My name is Gereon Franken, I am 23 years old and I am currently in my dual Master program for Big Data & Business Analytics.
             I am a passionate developer who highly values learning new things. To tackle challenges in a team and to find creative solutions
-            for these is very exciting for me. Therefore, I am always motivated to reach achievments together.
+            for these is very exciting for me. Therefore, I am always motivated to reach achievements together.
         </div>
         <ng-template #germanLanguage >
             <div class="language">
