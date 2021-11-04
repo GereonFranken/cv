@@ -12,6 +12,14 @@
                 </div>
                 <div class="smallerPie">{{skill.skillName}}</div>
             </div>
-        <div>
+        </div>
+    </div>
+    <div class="certificates">
+        <h2 class="header">Certificates</h2>
+        <mat-card *ngFor="let cert of certificates" class="cert-card">
+            {{cert.name}}
+            <span *ngIf="cert.email">Verification Email: {{cert.email}}</span>
+            <button mat-raised-button (click)="openCertificate(cert.url)" class="url-button">See Certificate</button>
+        </mat-card>
     </div>
 </div>

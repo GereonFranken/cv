@@ -20,6 +20,10 @@ export class SkillsComponent implements OnInit {
           level: 4,
         },
         {
+          skillName: 'Dutch',
+          level: 1,
+        },
+        {
           skillName: 'Russian',
           level: 1,
         },
@@ -81,26 +85,26 @@ export class SkillsComponent implements OnInit {
     },
   ]
 
-  // certificates = [
-  //     {
-  //       certificate: 'Scrum Master 1',
-  //       link: 'https://www.scrum.org/certificates/578823',
-  //     },
-  //     {
-  //       certificate: 'Bayesian Methods for Machine Learning',
-  //       link: 'https://www.coursera.org/account/accomplishments/verify/BTDCZTXNT6KG',
-  //     },
-  //     {
-  //       certificate: 'AWS Machine Learning Foundations',
-  //       link: `https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/
-  //             7ad03ab8-f48a-4177-9f76-7e8612932ce3.pdf?utm_campaign=sch_600_auto_ndxxx_aws-ml-completed_
-  //             global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_auto_ndxxx_aws-ml-complet`,
-  //     },
-  //     {
-  //       certificate: 'Introduction to Tensorflow for AI, ML and DL',
-  //       link: 'https://www.coursera.org/account/accomplishments/verify/YYEQQJQ6NF3B',
-  //     },
-  // ];
+  certificates = [
+    {
+      name: 'Scrum Master 1',
+      url: 'https://www.scrum.org/certificates/578823',
+      email: 'gereon.franken@dxc.com',
+    },
+    {
+      name: 'Bayesian Methods for Machine Learning',
+      url: 'https://www.coursera.org/account/accomplishments/verify/BTDCZTXNT6KG',
+    },
+    {
+      name: 'AWS Machine Learning Foundations',
+      url: `https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/7ad03ab8-f48a-4177-9f76-7e8612932ce3.pdf?utm_campaign=sch_600_auto_ndxxx_aws-ml-completed_global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_auto_ndxxx_aws-ml-complet`,
+    },
+    {
+      name: 'Introduction to Tensorflow for AI, ML and DL',
+      url: 'https://www.coursera.org/account/accomplishments/verify/YYEQQJQ6NF3B',
+    },
+
+  ];
 
   constructor() { }
 
@@ -119,6 +123,10 @@ export class SkillsComponent implements OnInit {
       return `linear-gradient(` + (level * 72 - 90) + `deg, transparent 50%, green 50%),
         linear-gradient(90deg, white 50%, transparent 50%)`
     }
+  }
+
+  openCertificate(url: string) {
+    window.open(url, "_blank");
   }
 
 }
