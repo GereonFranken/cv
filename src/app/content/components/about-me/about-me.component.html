@@ -1,5 +1,5 @@
 <div class="container" [ngClass]="{'container-mobile': onMobile}">
-    <div class="img-wrapper"><img src="{{profilePicPaths[picPointer]}}" class="profile-pic" [@.disabled]="disableAnimations" [@fade]="fadeInImg"></div>
+    <div class="img-wrapper"><img src="{{profilePicPath}}" class="profile-pic"></div>
     <mat-card class="card">
         <mat-radio-group aria-label="Select a language" [(ngModel)]="selectedLanguage" class="radio-group">
             <mat-radio-button value="english" [checked]=defaultChecked>English</mat-radio-button>
