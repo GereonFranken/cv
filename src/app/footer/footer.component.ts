@@ -8,6 +8,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 })
 export class FooterComponent implements OnInit {
 
+  // TODO: Maybe PDF download?
   githubSrc = '.\\assets\\img\\github.png';
   instagramSrc = '.\\assets\\img\\instagram.png';
   linkedInSrc = '.\\assets\\img\\linkedIn.png';
@@ -20,12 +21,6 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    /**
-     * Create footer bar with links
-     * LinkedIn
-     * PDF Download? 
-     */
-  }
+  ngOnInit(): void { }
 
 }

@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
         Math.abs(direction[0]) > 30 && // Long enough
         Math.abs(direction[0]) > Math.abs(direction[1] * 3) // Horizontal enough
       ) {
-        const swipe = direction[0] < 0 ? "next" : "pervious";
+        const swipe = direction[0] < 0 ? "next" : "previous";
         if (swipe === "next") {
           const isFirst = this.selectedTab === 0;
           if (this.selectedTab <= 3) {
